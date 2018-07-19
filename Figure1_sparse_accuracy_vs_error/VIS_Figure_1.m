@@ -1,7 +1,9 @@
 clear all
 close all
 
-load DATA_Figure_2_left_03-Jul-2018.mat
+addpath ../utils
+
+load DATA_Figure_1_14-Jul-2018.mat
 
 colors = {rgb('Red'), rgb('ForestGreen'),rgb('Blue'),rgb('DarkMagenta'),rgb('DarkOrange'),'c','y' };
 markers = {'d','+','^','x','>','*','<','o','v','s'};
@@ -59,16 +61,16 @@ set(gca,'fontsize',FONT_SIZE);
 set(gca,'ticklabelinterpreter','latex')
 %set(hl,'interpreter','latex','fontsize',FONT_SIZE-2)
 
-saveas(gcf,'Figure_2_left_a','epsc')
+saveas(gcf,'Figure_1_a','epsc')
 
 
 f2 = figure(2);
 set(gca,'fontsize',FONT_SIZE);
 set(gca,'ticklabelinterpreter','latex','fontsize',FONT_SIZE)
 
-saveas(gcf,'Figure_2_left_b','epsc')
+saveas(gcf,'Figure_1_b','epsc')
 
 title('')
 hl = legend(legend_recovery,'location','best');
 set(hl,'interpreter','latex');
-SaveLegendToImage(f2, hl, 'Figure_2_left_c','epsc')
+SaveLegendToImage(f2, hl, 'Figure_1_legend','epsc')

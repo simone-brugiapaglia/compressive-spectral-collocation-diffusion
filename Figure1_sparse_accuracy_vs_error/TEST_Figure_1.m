@@ -11,7 +11,7 @@ N = n^2;
 m_vals = ceil(2*s_vals*log(N));
 N_runs = 5;
 %diffusion = @(x) 1 + abs(x-1/2); % Diffusion coefficient a(x)
-diffusion = @(x1,x2) 1 + 0*x1 + 0*x2;
+diffusion = @(x1,x2) 1 + 0.25 * (x1 + x2);
 grad_diffusion = compute_gradient_2D(diffusion);
     
 rel_l2_error_full  = zeros(length(s_vals),N_runs);
@@ -66,7 +66,7 @@ end
 
 fprintf('\n')
 
-save(['DATA_Figure_2_left_',date],...
+save(['DATA_Figure_1_',date],...
     'time_recovery_full','time_assembly_full','rel_l2_error_full',...
     'time_recovery_CS','time_assembly_CS','rel_l2_error_CS',...
     'N','s_vals','diffusion','N_runs')
