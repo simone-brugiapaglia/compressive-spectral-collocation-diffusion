@@ -3,7 +3,7 @@ Code used in the article "A compressive spectral collocation method for the diff
 
 The scripts are based on the following Matlab packages:
 
-* OMP-Box
-* export_fig
+* OMP-Box (http://www.cs.technion.ac.il/~ronrubin/software.html)
+* export_fig (http://www.mathworks.com/matlabcentral/fileexchange/23629-export_fig)
 
-Both should be added to the Matlab path.
+These packages should be added to the Matlab path.
