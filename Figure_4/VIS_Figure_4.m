@@ -2,6 +2,7 @@ clear all
 close all
 
 addpath ../export_fig
+addpath ../utils
 
 load DATA_Figure_4_15-Jul-2018.mat
 
@@ -78,7 +79,7 @@ for i_fig = 1:9
     set(gca,'ticklabelinterpreter','latex')
     set(gcf,'color','white')
     
-    export_fig(['Figure_6_',num2str(i_fig)],'-eps')
+    export_fig(['Figure_4_',num2str(i_fig)],'-eps')
 end
 
 
